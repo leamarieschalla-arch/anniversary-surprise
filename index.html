@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unser Jahrestag - Linus & Ich 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="confetti" style="display: none;"></canvas>
+    
+    <!-- Header -->
+    <header class="header">
+        <h1 class="main-title">Unser Jahrestag 💕</h1>
+        <p class="subtitle">1 Jahr mit dir ist das beste Abenteuer</p>
+    </header>
+
+    <!-- Countdown Section -->
+    <section class="section countdown-section">
+        <h2>Countdown bis 01.06.2026</h2>
+        <div class="countdown">
+            <div class="countdown-item">
+                <span class="countdown-number" id="days">0</span>
+                <span class="countdown-label">Tage</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="hours">00</span>
+                <span class="countdown-label">Stunden</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="minutes">00</span>
+                <span class="countdown-label">Minuten</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-number" id="seconds">00</span>
+                <span class="countdown-label">Sekunden</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section class="section slideshow-section">
+        <h2>Unsere schönsten Momente</h2>
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="images/photo1.jpg" alt="Wir zusammen">
+            </div>
+            <div class="slide fade">
+                <img src="images/photo2.jpg" alt="Wir zusammen">
+            </div>
+            <div class="slide fade">
+                <img src="images/photo3.jpg" alt="Wir zusammen">
+            </div>
+            <div class="slide fade">
+                <img src="images/photo4.jpg" alt="Wir zusammen">
+            </div>
+            <div class="slide fade">
+                <img src="images/photo5.jpg" alt="Wir zusammen">
+            </div>
+
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+
+        <div class="dots-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </section>
+
+    <!-- Bears Animation Section -->
+    <section class="section bears-section">
+        <h2>Wir zwei ❤️</h2>
+        <div class="bears-container">
+            <div class="bear white-bear">🐻</div>
+            <div class="heart-animation">💕</div>
+            <div class="bear brown-bear">🐻‍🦁</div>
+        </div>
+    </section>
+
+    <!-- Weltreise Section -->
+    <section class="section world-trip-section">
+        <h2>Unsere Weltreise 🌍</h2>
+        <p class="section-description">Klick auf die Länder, die wir besucht haben!</p>
+        
+        <div class="countries-grid" id="countriesGrid">
+            <!-- Wird durch JavaScript gefüllt -->
+        </div>
+
+        <h3 style="margin-top: 40px; color: #9c5ba8;">Besuchte Länder:</h3>
+        <div class="visited-list" id="visitedList">
+            <p style="color: #999;">Noch keine Länder hinzugefügt 🌍</p>
+        </div>
+    </section>
+
+    <!-- Bucket List Section -->
+    <section class="section bucket-list-section">
+        <h2>Unsere Bucket List 🎯</h2>
+        <p class="section-description">Träume, die wir noch gemeinsam erleben möchten</p>
+        
+        <div class="bucket-input-container">
+            <input type="text" id="bucketInput" class="bucket-input" placeholder="Neuen Traum hinzufügen...">
+            <button class="bucket-add-btn" onclick="addBucketItem()">Hinzufügen</button>
+        </div>
+
+        <ul class="bucket-list" id="bucketList">
+            <!-- Wird durch JavaScript gefüllt -->
+        </ul>
+    </section>
+
+    <!-- Surprise Box Section -->
+    <section class="section surprise-section">
+        <h2>Eine Überraschung für dich 🎁</h2>
+        <div class="surprise-box" onclick="openSurprise()">
+            <span class="surprise-emoji">🎁</span>
+        </div>
+        <div class="surprise-content" id="surprise-content">
+            <!-- Wird durch Klick gefüllt -->
+        </div>
+    </section>
+
+    <!-- Brief Section -->
+    <section class="section letter-section">
+        <h2>Ein Brief für dich 💌</h2>
+        <button class="letter-btn" onclick="openLetter()">Brief öffnen</button>
+        
+        <div class="letter-overlay hidden" id="letterContent" onclick="closeLetter()">
+            <div class="letter-box" onclick="event.stopPropagation()">
+                <button class="letter-close" onclick="closeLetter()">✕</button>
+                <div class="letter-content" id="letterText">
+                    <!-- Wird durch JavaScript gefüllt -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Mit all meiner Liebe gemacht für dich 💕</p>
+        <p style="font-size: 0.9em; color: #bbb; margin-top: 10px;">Alles Liebe zum 1. Jahrestag!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
