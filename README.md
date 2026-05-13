@@ -142,6 +142,7 @@
             <p>Mit ❤️ erstellt für Linus</p>
             <p>01.06.2025 - 01.06.2026</p>
         </footer>
+        script.js
     </div>
     
     <script src="script.js"></script>
